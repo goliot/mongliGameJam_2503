@@ -15,6 +15,6 @@ MonoBehaviour:
   maxHealth: 100
   attackPower: 10
   moveSpeed: 1
-  waitTime: 4
-  attackRange: 5
-  chaseRange: 8
+  waitTime: 1.5
+  attackRange: 1
+  chaseRange: 7
