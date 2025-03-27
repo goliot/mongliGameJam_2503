@@ -18,11 +18,17 @@ public class Monster : MonoBehaviour
     [SerializeField]
     private Image healthBar;
 
+    private float _health = 0;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        _health = MonsterDataSO.maxHealth;
     }
 
     void Start()
@@ -39,7 +45,7 @@ public class Monster : MonoBehaviour
     {
         fsm.Update();
 
-        if(MonsterDataSO.health <= 0)
+        if(_health <= 0)
         {
             //사망 처리
             //애니매이션 없이, 시체 보여주면서 objectPool로 return
@@ -93,8 +99,8 @@ public class Monster : MonoBehaviour
             GameObject blood = PoolManager.Instance.GetObject(EObjectType.Blood);
             blood.transform.position = transform.position;
         }
-        MonsterDataSO.health -= damage;
-        healthBar.fillAmount = MonsterDataSO.health / (float)MonsterDataSO.maxHealth;
+        _health -= damage;
+        healthBar.fillAmount = _health / (float)MonsterDataSO.maxHealth;
         return;
 
     }

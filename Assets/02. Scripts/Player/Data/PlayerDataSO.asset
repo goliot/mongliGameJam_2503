@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbe005281293ad418e577f7d24fac12, type: 3}
-  m_Name: ZombieData
+  m_Script: {fileID: 11500000, guid: 202b8bb4ac592da448b89c3b3246ebfd, type: 3}
+  m_Name: PlayerDataSO
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  attackPower: 10
-  moveSpeed: 1
-  waitTime: 4
-  attackRange: 5
-  chaseRange: 8
+  MaxHp: 100
+  OriginalDamage: 10
+  NowDamage: 10
+  OriginalSpeed: 5
+  NowSpeed: 5
+  OriginalAtkSpeed: 0.3
+  NowAtkSpeed: 0.3
