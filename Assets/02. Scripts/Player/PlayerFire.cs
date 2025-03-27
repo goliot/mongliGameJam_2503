@@ -6,16 +6,35 @@ public class PlayerFire : MonoBehaviour
     [SerializeField] private Transform Muzzle;
     [SerializeField] private GameObject EmptyCartridge;
 
+    [SerializeField] private float AttackSpeed;
+    private float _timer = 0f;
+
+    [SerializeField] private GunSpin gunSpin;
+    
+    private FollowCamera mainCamera;
+    
+
+    private void Awake()
+    {
+        mainCamera = Camera.main.GetComponent<FollowCamera>();
+    }
+
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        _timer += Time.deltaTime;
+        if(Input.GetMouseButton(0))
         {
-            Fire();
-        }    
+            if(_timer >= AttackSpeed)
+            {
+                _timer = 0;
+                Fire();
+            }
+        }
     }
 
     private void Fire()
     {
+        mainCamera.Shake();
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
 
@@ -31,13 +50,15 @@ public class PlayerFire : MonoBehaviour
         bullet.transform.rotation = rotation;
 
         DropCartridge();
+
+        gunSpin.TriggerRecoil();
     }
 
     private void DropCartridge()
     {
         GameObject cartridge = PoolManager.Instance.GetObject(EObjectType.Cartridge);
         cartridge.transform.position = Gun.transform.position;
-        cartridge.GetComponent<Fragment>().cartridge.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-50, 50), ForceMode2D.Impulse);
+        //cartridge.GetComponent<Fragment>().cartridge.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-50, 50), ForceMode2D.Impulse);
 
     }
 }

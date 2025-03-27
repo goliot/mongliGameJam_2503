@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Fragment : MonoBehaviour
 {
+    [SerializeField] private EObjectType type;
+
     public int maxBounce;	// ÆÃ±â´Â È½¼ö
 
     public float xForce;	// xÃà Èû (´õ ¸Ö¸®)
@@ -33,6 +35,7 @@ public class Fragment : MonoBehaviour
         InitVariable();
         currentheight = Random.Range(yForce - 1, yForce);
         maxHeight = currentheight;
+        cartridge.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-50, 50), ForceMode2D.Impulse);
         Initialize(new Vector2(Random.Range(-xForce, xForce), Random.Range(-xForce, xForce)));
     }
 
@@ -91,6 +94,6 @@ public class Fragment : MonoBehaviour
 
     void ReleaseToPool()
     {
-        PoolManager.Instance.ReturnObject(gameObject, EObjectType.Cartridge);
+        PoolManager.Instance.ReturnObject(gameObject, type);
     }
 }

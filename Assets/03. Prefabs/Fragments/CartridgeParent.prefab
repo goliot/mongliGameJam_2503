@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8f19c4de7c8b042acb9fb86cb77381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   maxBounce: 3
   xForce: 3
   yForce: 15

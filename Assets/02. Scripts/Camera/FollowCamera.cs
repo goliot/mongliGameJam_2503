@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
@@ -31,8 +32,12 @@ public class FollowCamera : MonoBehaviour
         }
         else
         {
-            isShaking = false;
             Vector3 targetPosition = TargetTransform.position + Offset;
+            if (isShaking)
+            {
+                //transform.position = targetPosition;
+                isShaking = false;
+            }
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }
     }

@@ -24,12 +24,6 @@ public class GunSpin : MonoBehaviour
     private void Update()
     {
         Spin();
-
-        // 발사 키 입력 시 반동 효과 실행
-        if (Input.GetMouseButtonDown(0))
-        {
-            TriggerRecoil();
-        }
     }
 
     private void Spin()
@@ -59,7 +53,7 @@ public class GunSpin : MonoBehaviour
     /// <summary>
     /// 총기 반동 효과를 트리거
     /// </summary>
-    private void TriggerRecoil()
+    public void TriggerRecoil()
     {
         // 이미 실행 중인 반동 코루틴이 있다면 중단
         if (_recoilCoroutine != null)

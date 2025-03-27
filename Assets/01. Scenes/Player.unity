@@ -957,8 +957,8 @@ MonoBehaviour:
   Offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.3
   isShaking: 0
-  ShakeAmount: 0.1
-  ShakeDuration: 0.5
+  ShakeAmount: 0.05
+  ShakeDuration: 0.1
 --- !u!1 &548054158
 GameObject:
   m_ObjectHideFlags: 0
@@ -17787,6 +17787,17 @@ Transform:
   - {fileID: 429521155}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2006002929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1186235305213573991, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
+  m_PrefabInstance: {fileID: 6976437735685162294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8943495f29ee18042991ce68fb39fb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040479474
 GameObject:
   m_ObjectHideFlags: 0
@@ -18017,6 +18028,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -933829349695865937, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
+      propertyPath: gunSpin
+      value: 
+      objectReference: {fileID: 2006002929}
+    - target: {fileID: -933829349695865937, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
+      propertyPath: AttackSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2827727127134870675, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
       propertyPath: m_Name
       value: Player
