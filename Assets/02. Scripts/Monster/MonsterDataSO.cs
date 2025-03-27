@@ -5,8 +5,6 @@ public class MonsterDataSO : ScriptableObject
 {
     //몬스터 최대체력
     public float maxHealth;
-    //몬스터 체력
-    public float health;
     //몬스터 공격력
     public float attackPower;
     //몬스터 이동속도

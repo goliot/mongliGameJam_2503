@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float Speed;
-
     [Header("Dash Settings")]
     public float dashSpeed = 15f;  // 대시 속도
     public float dashDuration = 0.2f;  // 대시 지속 시간
@@ -11,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     private float lastDashTime;
     public GameObject AfterImage;
 
+    private PlayerDataSO _playerData;
     private Animator _animator;
     private SpriteRenderer _sr;
     private Rigidbody2D _rb;
@@ -25,6 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
+        _playerData = GetComponent<Player>().PlayerData;
         _animator = GetComponent<Animator>();
         _sr = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
@@ -57,7 +57,7 @@ public class PlayerMove : MonoBehaviour
             return;
         }
 
-        transform.Translate(_direction * Speed * Time.deltaTime);
+        transform.Translate(_direction * _playerData.NowSpeed * Time.deltaTime);
     }
 
     private void Dash()
