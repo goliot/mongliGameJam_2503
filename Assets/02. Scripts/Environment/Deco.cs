@@ -18,6 +18,9 @@ public class Deco : MonoBehaviour
         {
             _sr.DOColor(Color.yellow, 0.2f);
             _hitCounter--;
+
+            PoolManager.Instance.ReturnObject(collision.gameObject, EObjectType.Bullet);
+
             if(_hitCounter <= 0)
             {
                 BreakRoutine();
@@ -27,6 +30,6 @@ public class Deco : MonoBehaviour
 
     private void BreakRoutine()
     {
-
+        Destroy(gameObject);
     }
 }

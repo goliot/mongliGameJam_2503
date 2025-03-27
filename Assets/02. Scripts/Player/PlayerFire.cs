@@ -37,7 +37,7 @@ public class PlayerFire : MonoBehaviour
     {
         GameObject cartridge = PoolManager.Instance.GetObject(EObjectType.Cartridge);
         cartridge.transform.position = Gun.transform.position;
-        cartridge.GetComponent<Cartridge>().cartridge.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-50, 50), ForceMode2D.Impulse);
+        cartridge.GetComponent<Fragment>().cartridge.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-50, 50), ForceMode2D.Impulse);
 
     }
 }

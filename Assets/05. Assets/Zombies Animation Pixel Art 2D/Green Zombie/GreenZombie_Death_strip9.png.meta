@@ -120,6 +120,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -334,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GreenZombie_Death_strip9_0: 6478595157560503191
+      GreenZombie_Death_strip9_1: 581471528968418067
+      GreenZombie_Death_strip9_2: -4312343912591823070
+      GreenZombie_Death_strip9_3: -3870791449334201315
+      GreenZombie_Death_strip9_4: 5578613276858031157
+      GreenZombie_Death_strip9_5: -2556905677656871148
+      GreenZombie_Death_strip9_6: 5155302010093378307
+      GreenZombie_Death_strip9_7: 4126930342322335430
+      GreenZombie_Death_strip9_8: 8389838441733414274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

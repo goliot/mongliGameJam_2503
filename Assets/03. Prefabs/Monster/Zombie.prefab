@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 726664045986259079}
   - component: {fileID: 4662210033345184982}
   - component: {fileID: 5654038021256329166}
-  - component: {fileID: 90663019844934082}
+  - component: {fileID: 6924118327938797016}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Monster
@@ -204,13 +204,16 @@ MonoBehaviour:
   MonsterDataSO: {fileID: 11400000, guid: 228f8fc717d9fe445b1651a58008656c, type: 2}
   healthBarObj: {fileID: 1503627737719080877}
   healthBar: {fileID: 2476965372536880935}
---- !u!136 &90663019844934082
-CapsuleCollider:
+--- !u!70 &6924118327938797016
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2343064318238137536}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -219,14 +222,25 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8, y: 1}
+  m_Direction: 0
 --- !u!1 &4964091434800763427
 GameObject:
   m_ObjectHideFlags: 0

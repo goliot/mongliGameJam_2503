@@ -11,6 +11,12 @@ public class Bullet : MonoBehaviour
         {
             PoolManager.Instance.ReturnObject(gameObject, EObjectType.Bullet);
         }
+
+        if(collision.CompareTag("Monster"))
+        {
+            collision.GetComponent<Monster>().TakeDamage();
+            PoolManager.Instance.ReturnObject(gameObject, EObjectType.Bullet);
+        }
     }
 
     private void Update()

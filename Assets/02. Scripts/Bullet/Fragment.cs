@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Cartridge : MonoBehaviour
+public class Fragment : MonoBehaviour
 {
     public int maxBounce;	// ÆÃ±â´Â È½¼ö
 

@@ -78,6 +78,12 @@ public class Monster : MonoBehaviour
     public void TakeDamage()
     {
         SetAnimator("Hurt");
+        int bloodCount = Random.Range(3, 10);
+        for (int i = 0; i < bloodCount; i++)
+        {
+            GameObject blood = PoolManager.Instance.GetObject(EObjectType.Blood);
+            blood.transform.position = transform.position;
+        }
         return;
     }
 

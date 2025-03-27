@@ -120,6 +120,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -334,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlueZombie_Attack_strip9_0: 2388653732005493776
+      BlueZombie_Attack_strip9_1: -8062247605477776213
+      BlueZombie_Attack_strip9_2: -85948646284986712
+      BlueZombie_Attack_strip9_3: 8876238561842458625
+      BlueZombie_Attack_strip9_4: 7999622430642740133
+      BlueZombie_Attack_strip9_5: -8169362027379196074
+      BlueZombie_Attack_strip9_6: -1051291701633696368
+      BlueZombie_Attack_strip9_7: 2052037302187847290
+      BlueZombie_Attack_strip9_8: -5258590403720915106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

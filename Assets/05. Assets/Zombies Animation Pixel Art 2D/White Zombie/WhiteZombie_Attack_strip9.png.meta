@@ -120,6 +120,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -334,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WhiteZombie_Attack_strip9_0: 6426077298507386613
+      WhiteZombie_Attack_strip9_1: 8372276394501649194
+      WhiteZombie_Attack_strip9_2: -4369741054019145349
+      WhiteZombie_Attack_strip9_3: -7458320302112838545
+      WhiteZombie_Attack_strip9_4: -4602190354290653847
+      WhiteZombie_Attack_strip9_5: 3567320333413535456
+      WhiteZombie_Attack_strip9_6: 1204367257320757241
+      WhiteZombie_Attack_strip9_7: 4862079934928514516
+      WhiteZombie_Attack_strip9_8: -4979811322968016446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
