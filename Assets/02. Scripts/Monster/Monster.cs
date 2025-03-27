@@ -1,6 +1,6 @@
 using System.Threading;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Monster : MonoBehaviour
 {
@@ -13,6 +13,11 @@ public class Monster : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    [SerializeField]
+    private GameObject healthBarObj;
+    [SerializeField]
+    private Image healthBar;
+
 
     private void Awake()
     {
@@ -22,6 +27,7 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
+        healthBarObj.SetActive(false);
         playerTarget = GameObject.FindGameObjectWithTag("Player")?.transform;
         MonsterFsmFactory fsmFactory = new MonsterFsmFactory();
         fsm = fsmFactory.Create(this);
@@ -32,6 +38,11 @@ public class Monster : MonoBehaviour
     void Update()
     {
         fsm.Update();
+
+        if(Input.GetKeyDown(KeyCode.V))
+        {
+            TakeDamage(10f);
+        }
     }
 
     public MonsterDataSO GetInfo()
@@ -68,6 +79,15 @@ public class Monster : MonoBehaviour
     {
         SetAnimator("Hurt");
         return;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        healthBarObj.SetActive(true);
+        SetAnimator("Hurt");
+        MonsterDataSO.health -= damage;
+        healthBar.fillAmount = MonsterDataSO.health / (float)MonsterDataSO.maxHealth; 
+
     }
 
     private void OnDrawGizmos()
