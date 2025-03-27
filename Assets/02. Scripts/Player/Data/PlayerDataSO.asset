@@ -17,5 +17,5 @@ MonoBehaviour:
   NowDamage: 10
   OriginalSpeed: 5
   NowSpeed: 5
-  OriginalAtkSpeed: 0.3
-  NowAtkSpeed: 0.3
+  OriginalAtkSpeed: 0.1
+  NowAtkSpeed: 0.1
