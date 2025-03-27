@@ -39,9 +39,17 @@ public class Monster : MonoBehaviour
     {
         fsm.Update();
 
-        if(Input.GetKeyDown(KeyCode.V))
+        if(MonsterDataSO.health <= 0)
         {
-            TakeDamage(10f);
+            //사망 처리
+            //애니매이션 없이, 시체 보여주면서 objectPool로 return
+            int partCount = Random.Range(2, 3);
+            for (int i = 0; i < partCount; i++)
+            {
+                GameObject part = PoolManager.Instance.GetObject(EObjectType.ZombiePart);
+                part.transform.position = transform.position;
+            }
+            PoolManager.Instance.ReturnObject(this.gameObject, EObjectType.Zombie);
         }
     }
 
@@ -75,24 +83,19 @@ public class Monster : MonoBehaviour
         return MonsterDataSO.moveSpeed;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float damage = 10f)
     {
-        SetAnimator("Hurt");
         int bloodCount = Random.Range(3, 10);
+        healthBarObj.SetActive(true);
+        SetAnimator("Hurt");
         for (int i = 0; i < bloodCount; i++)
         {
             GameObject blood = PoolManager.Instance.GetObject(EObjectType.Blood);
             blood.transform.position = transform.position;
         }
-        return;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        healthBarObj.SetActive(true);
-        SetAnimator("Hurt");
         MonsterDataSO.health -= damage;
-        healthBar.fillAmount = MonsterDataSO.health / (float)MonsterDataSO.maxHealth; 
+        healthBar.fillAmount = MonsterDataSO.health / (float)MonsterDataSO.maxHealth;
+        return;
 
     }
 
