@@ -5,57 +5,40 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class MonsterState_Move : MonsterState
 {
-    private Transform playerTransform;
-    private float attackRange = 5f;  // 공격 범위 (예시 값)
 
 public MonsterState_Move(Monster _monster) : base(_monster, eMonsterState.move)
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
     //이동 진입
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Monster Enter Move");
         monster.SetAnimator("Walk");
-        
-   
     }
 
     //상시 실행
     public override void Update()
     {
         base.Update();
-        Debug.Log($"Monster Move Update : to {playerTransform.position}");
 
         //필드에 목표로하는 몬스터가 없을경우
-        if (playerTransform != null)
+        if (monster.GetTargetPos() != null)
         {
-            Vector3 direction = (playerTransform.position - monster.transform.position).normalized;
+            Vector3 direction = (monster.GetTargetPos().position - monster.transform.position).normalized;
 
-            // direction방향으로 이미지 반전
             if (direction.x < 0)
-            {
-                monster.GetSprite().flipX = true;  // 왼쪽으로 이동하면 이미지를 반전시킴
-            }
+                monster.GetSprite().flipX = true;
             else
-            {
-                monster.GetSprite().flipX = false;  // 오른쪽으로 이동하면 이미지를 원래대로
-            }
+                monster.GetSprite().flipX = false;
 
-            // 몬스터 이동
             monster.transform.position += direction * Time.deltaTime * monster.GetSpeed();
 
-            // 플레이어와 몬스터 간의 거리 계산
-            float distanceToPlayer = Vector3.Distance(monster.transform.position, playerTransform.position);
+            float distanceToPlayer = Vector3.Distance(monster.transform.position, monster.GetTargetPos().position);
 
             // 공격 범위 내에 들어왔을 때 attack 상태로 전환
-            if (distanceToPlayer <= attackRange)
-            {
-                Debug.Log("Player in attack range, switching to Attack");
+            if (distanceToPlayer <= monster.GetInfo().attackRange)
                 monster.fsm.SetState(eMonsterState.attack);
-            }
         }
         else
         {

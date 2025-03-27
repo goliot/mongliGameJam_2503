@@ -1,21 +1,18 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Monster : MonoBehaviour
 {
-    public MonsterFsm fsm;
-    public MonsterFsmFactory fsmFactory;
-    public GameObject Target;
-
-    
     [SerializeField]
-    private float moveSpeed;
+    private MonsterDataSO MonsterDataSO;
 
+    public MonsterFsm fsm;
+    private MonsterFsmFactory fsmFactory;
+    private Transform playerTarget;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private float detectionRange = 10f;
-    private float attackRange;
-    private Transform playerTransform;
+
 
     private void Awake()
     {
@@ -25,38 +22,31 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
-        //playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
+        playerTarget = GameObject.FindGameObjectWithTag("Player")?.transform;
         MonsterFsmFactory fsmFactory = new MonsterFsmFactory();
         fsm = fsmFactory.Create(this);
 
-        // 초기 상태 설정
         fsm.SetState(eMonsterState.idle);
     }
 
     void Update()
     {
-        // FSM 업데이트
         fsm.Update();
-
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SetAnimator("Death");
-        }
-
     }
 
-    public void GetInfo()
+    public MonsterDataSO GetInfo()
     {
-        //SO로 데이터 만들어서 여기서 다 긁어올 수 있도록 ?
+        return MonsterDataSO;
     }
 
-    public float GetdetectionRange()
+    public Transform GetTargetPos()
     {
-        return detectionRange;
+        return playerTarget;
+    }
+
+    public float GetchaseRangeRange()
+    {
+        return MonsterDataSO.chaseRange;
     }
 
     public void SetAnimator(string clipName)
@@ -71,7 +61,7 @@ public class Monster : MonoBehaviour
 
     public float GetSpeed()
     {
-        return moveSpeed;
+        return MonsterDataSO.moveSpeed;
     }
 
     public void TakeDamage()
@@ -82,9 +72,13 @@ public class Monster : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // Gizmo 색상 설정 (반투명 빨간색)
-        Gizmos.color = new Color(1f, 0f, 0f, 1f);  // 알파 값 0.2로 반투명하게 설정
-        // 몬스터의 위치를 중심으로 detectionRange 범위 안에 원을 그립니다.
-        Gizmos.DrawWireSphere(this.transform.position, detectionRange);
+        //빨강 : 추적범위
+        Gizmos.color = new Color(1f, 0f, 0f, 1f);
+        Gizmos.DrawWireSphere(this.transform.position, MonsterDataSO.chaseRange);
+
+        //노랑 : 공격범위
+        Gizmos.color = new Color(1f, 1f, 0f, 1f);
+        Gizmos.DrawWireSphere(this.transform.position, MonsterDataSO.attackRange);
+
     }
 }

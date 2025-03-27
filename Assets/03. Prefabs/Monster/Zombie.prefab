@@ -124,8 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec8c90221be89145986aadb6a5eae7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
-  moveSpeed: 1
+  MonsterDataSO: {fileID: 11400000, guid: 228f8fc717d9fe445b1651a58008656c, type: 2}
 --- !u!136 &90663019844934082
 CapsuleCollider:
   m_ObjectHideFlags: 0
