@@ -6,17 +6,16 @@ public class PlayerFire : MonoBehaviour
     [SerializeField] private Transform Muzzle;
     [SerializeField] private GameObject EmptyCartridge;
 
+    [SerializeField] private float AttackSpeed;
     private float _timer = 0f;
 
     [SerializeField] private GunSpin gunSpin;
     
     private FollowCamera mainCamera;
-    private PlayerDataSO _playerData;
     
 
     private void Awake()
     {
-        _playerData = GetComponent<Player>().PlayerData;
         mainCamera = Camera.main.GetComponent<FollowCamera>();
     }
 
@@ -25,7 +24,7 @@ public class PlayerFire : MonoBehaviour
         _timer += Time.deltaTime;
         if(Input.GetMouseButton(0))
         {
-            if(_timer >= _playerData.NowAtkSpeed)
+            if(_timer >= AttackSpeed)
             {
                 _timer = 0;
                 Fire();
@@ -48,7 +47,6 @@ public class PlayerFire : MonoBehaviour
 
         bullet.transform.position = Muzzle.position;
         bullet.GetComponent<Bullet>().Direction = direction;
-        bullet.GetComponent<Bullet>().Damage = _playerData.NowDamage;
         bullet.transform.rotation = rotation;
 
         DropCartridge();

@@ -4,7 +4,6 @@ public class Bullet : MonoBehaviour
 {
     public Vector3 Direction;
     public float Speed;
-    public float Damage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +14,7 @@ public class Bullet : MonoBehaviour
 
         if(collision.CompareTag("Monster"))
         {
-            collision.GetComponent<Monster>().TakeDamage(Damage);
+            collision.GetComponent<Monster>().TakeDamage();
             PoolManager.Instance.ReturnObject(gameObject, EObjectType.Bullet);
         }
     }
