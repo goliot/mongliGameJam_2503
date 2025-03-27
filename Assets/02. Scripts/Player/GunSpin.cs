@@ -7,6 +7,8 @@ public class GunSpin : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Quaternion _targetRotation; // 로컬 플레이어의 회전 목표
 
+    [SerializeField] private Transform Muzzle;
+
     [Header("Recoil Settings")]
     public float RecoilDistance = 0.2f; // 반동 거리
     public float RecoilDuration = 0.05f; // 반동 효과 지속 시간
@@ -21,40 +23,38 @@ public class GunSpin : MonoBehaviour
 
     private void Update()
     {
-        // 로컬 플레이어의 경우 마우스 위치 기반 회전 처리
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0;
+        Spin();
 
-        Vector2 dir = transform.localPosition - mousePosition;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-        _targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        transform.rotation = _targetRotation;
-
-        // 마우스 위치에 따라 flipX 및 gunTip의 위치 반전
-        if (mousePosition.x > transform.position.x)
-        {
-            _spriteRenderer.flipY = true;
-            //pv.RPC("SortingOrderControl", RpcTarget.AllBuffered, 4);
-        }
-        else
-        {
-            _spriteRenderer.flipY = false;
-            //pv.RPC("SortingOrderControl", RpcTarget.AllBuffered, 6);
-        }
-
-        // 발사 키 입력 시 반동 효과
+        // 발사 키 입력 시 반동 효과 실행
         if (Input.GetMouseButtonDown(0))
         {
             TriggerRecoil();
         }
     }
 
-    /*[PunRPC]
-    void FlipYRPC(bool flipFlag) => spriteRenderer.flipY = flipFlag;
+    private void Spin()
+    {
+        // 마우스 위치 계산 (월드 좌표 변환)
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0; // 2D 게임이므로 Z 좌표 고정
 
-    [PunRPC]
-    void SortingOrderControl(int x) => spriteRenderer.sortingOrder = x;*/
+        // 방향 벡터 계산
+        Vector2 dir = transform.position - mousePosition;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        // 총 회전 적용
+        _targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        transform.rotation = _targetRotation;
+
+        // 마우스 위치에 따라 flipY 및 총구 위치 반전
+        bool isRightSide = mousePosition.x > transform.position.x;
+        _spriteRenderer.flipY = isRightSide;  // 마우스 위치에 따라 총 회전
+
+        // Muzzle 위치 반전 (로컬 좌표 사용)
+        Vector3 localMuzzlePos = Muzzle.localPosition;
+        localMuzzlePos.y = Mathf.Abs(localMuzzlePos.y) * (isRightSide ? -1 : 1);
+        Muzzle.localPosition = localMuzzlePos;
+    }
 
     /// <summary>
     /// 총기 반동 효과를 트리거

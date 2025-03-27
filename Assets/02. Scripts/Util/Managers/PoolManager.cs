@@ -10,10 +10,10 @@ public class PoolManager : MonoSingleton<PoolManager>
     {
         base.Awake();
 
-        Initialize();
+        Init();
     }
 
-    private void Initialize()
+    public override void Init()
     {
         foreach (PoolInfo info in _poolInfoList)
         {
