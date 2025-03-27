@@ -13,7 +13,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
             if (_instance == null)
             {
                 // Try to find an existing instance in the scene
-                _instance = FindObjectOfType<T>();
+                _instance = FindAnyObjectByType<T>();
 
                 if (_instance == null)
                 {
