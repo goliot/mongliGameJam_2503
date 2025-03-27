@@ -5,6 +5,14 @@ public class Bullet : MonoBehaviour
     public Vector3 Direction;
     public float Speed;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Wall"))
+        {
+            PoolManager.Instance.ReturnObject(gameObject, EObjectType.Bullet);
+        }
+    }
+
     private void Update()
     {
         // ¿Ãµø

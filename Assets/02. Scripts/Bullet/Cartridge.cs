@@ -20,10 +20,12 @@ public class Cartridge : MonoBehaviour
     public Transform shadow;
 
     private Vector2 _originalShadowScale;
+    private Color _originColor;
 
     private void Awake()
     {
         _originalShadowScale = shadow.transform.localScale;
+        _originColor = cartridge.GetComponent<SpriteRenderer>().color;
     }
 
     void OnEnable()
@@ -38,7 +40,7 @@ public class Cartridge : MonoBehaviour
     {
         currentBounce = 0;
         isGrounded = false;
-        cartridge.GetComponent<SpriteRenderer>().color = Color.white;
+        cartridge.GetComponent<SpriteRenderer>().color = _originColor;
     }
 
     void Update()

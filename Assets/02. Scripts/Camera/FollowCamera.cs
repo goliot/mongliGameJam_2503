@@ -37,7 +37,7 @@ public class FollowCamera : MonoBehaviour
         }
     }
 
-    void Shake()
+    public void Shake()
     {
         isShaking = true;
         _shakeTimer = ShakeDuration;
