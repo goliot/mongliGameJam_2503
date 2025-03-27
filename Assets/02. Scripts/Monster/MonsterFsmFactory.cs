@@ -14,7 +14,7 @@ public class MonsterFsmFactory
         //공격
         _fsm.AddFsm(new MonsterState_Attack(_monster));
         //공격대기
-        //필요가 없을지도?
+        _fsm.AddFsm(new MonsterState_AttackWait(_monster));
         //사망
         _fsm.AddFsm(new MonsterState_Death(_monster));
 

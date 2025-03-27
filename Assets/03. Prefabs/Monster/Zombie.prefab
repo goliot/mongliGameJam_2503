@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 726664045986259079}
   - component: {fileID: 4662210033345184982}
   - component: {fileID: 5654038021256329166}
+  - component: {fileID: 90663019844934082}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Monster
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -99,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 2343064318238137536}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 5873689311351173736, guid: cd0cc5a9499a44c4e96f4bd07f8c50a6, type: 3}
+  m_Controller: {fileID: 9100000, guid: 690e86c32e1ae064c9a9b5134d0e788b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -124,5 +125,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  attackRange: 0
   moveSpeed: 1
+--- !u!136 &90663019844934082
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343064318238137536}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
