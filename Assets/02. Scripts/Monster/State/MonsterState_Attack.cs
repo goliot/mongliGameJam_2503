@@ -16,6 +16,8 @@ public class MonsterState_Attack : MonsterState
         //공격 애니가 실행되는 순간 데미지가 들어가는 걸로
         monster.SetAnimator("Attack");
         isAttackAnimationFinished = false;
+        monster.GetTargetPos().GetComponent<Player>().TakeDamage(monster.GetInfo().attackPower);
+        Debug.Log($"Monster Give Damge : {monster.GetInfo().attackPower}");
     }
 
     public override void Update()

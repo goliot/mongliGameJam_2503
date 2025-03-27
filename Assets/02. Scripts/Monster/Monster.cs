@@ -1,4 +1,6 @@
+using DG.Tweening;
 using System.Threading;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +31,7 @@ public class Monster : MonoBehaviour
     private void OnEnable()
     {
         _health = MonsterDataSO.maxHealth;
+        healthBarObj.SetActive(false);
     }
 
     void Start()
@@ -91,6 +94,9 @@ public class Monster : MonoBehaviour
 
     public void TakeDamage(float damage = 10f)
     {
+        GameObject damageNum = PoolManager.Instance.GetObject(EObjectType.DamageNum);
+        Show(damageNum, damage);
+
         int bloodCount = Random.Range(3, 10);
         healthBarObj.SetActive(true);
         SetAnimator("Hurt");
@@ -103,6 +109,36 @@ public class Monster : MonoBehaviour
         healthBar.fillAmount = _health / (float)MonsterDataSO.maxHealth;
         return;
 
+    }
+
+    private void Show(GameObject damageNum, float damage)
+    {
+        damageNum.transform.position = healthBarObj.transform.position;
+        damageNum.GetComponent<TextMeshPro>().text = damage.ToString();
+
+        float moveDistance = 1.5f;  // 위로 튀어오를 거리
+        float moveDuration = 0.8f;  // 이동 시간
+        float returnDuration = 0.5f; // 다시 내려오는 시간
+        float randomX = Random.Range(-0.5f, 0.5f); // 좌우 랜덤 이동 범위
+
+        // 시작 위치 저장
+        Vector3 startPos = damageNum.transform.position;
+
+        // 튀어오른 후 랜덤한 X좌표로 돌아올 목표 위치 설정
+        Vector3 endPos = startPos + Vector3.up * moveDistance + new Vector3(randomX, 0, 0);
+        damageNum.transform.DOMove(endPos, moveDuration)
+                        .SetEase(Ease.OutQuad)  // 부드럽게 위로 튀어오르게
+                        .OnKill(() =>
+                        {
+                            // 내려오는 애니메이션 시작
+                            damageNum.transform.DOMove(startPos, returnDuration)
+                                                .SetEase(Ease.InQuad) // 부드럽게 내려오기
+                                                .OnKill(() =>
+                                                {
+                                                    // 내려온 후에는 객체를 풀로 반환하거나 삭제할 수 있음
+                                                    PoolManager.Instance.ReturnObject(damageNum, EObjectType.DamageNum);
+                                                });
+                        });
     }
 
     private void OnDrawGizmos()
