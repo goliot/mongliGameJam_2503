@@ -205,7 +205,7 @@ MonoBehaviour:
   MonsterDataSO: {fileID: 11400000, guid: 228f8fc717d9fe445b1651a58008656c, type: 2}
   healthBarObj: {fileID: 1503627737719080877}
   healthBar: {fileID: 4984222362500763877}
-  ExclamationObj: {fileID: 0}
+  ExclamationObj: {fileID: 3626962499438382850}
 --- !u!70 &6924118327938797016
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

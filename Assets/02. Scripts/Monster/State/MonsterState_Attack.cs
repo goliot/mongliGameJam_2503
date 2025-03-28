@@ -18,9 +18,7 @@ public class MonsterState_Attack : MonsterState
         //공격 애니가 실행되는 순간 데미지가 들어가는 걸로
         monster.SetAnimator("Attack");
         isAttackAnimationFinished = false;
-        monster.GetTargetPos().GetComponent<Player>().TakeDamage(monster.GetInfo().attackPower);
-
-        monster.StartCoroutine(monster.SetExclamationObj());
+        //monster.GetTargetPos().GetComponent<Player>().TakeDamage(monster.GetInfo().attackPower);
 
         //Enter로 들어가는 순간 플레이어를 향해 돌진
         Vector3 directionToPlayer = (monster.GetTargetPos().position - monster.transform.position).normalized;

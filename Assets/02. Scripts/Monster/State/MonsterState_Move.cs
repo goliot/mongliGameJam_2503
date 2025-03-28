@@ -15,6 +15,8 @@ public MonsterState_Move(Monster _monster) : base(_monster, eMonsterState.move)
     {
         base.Enter();
         monster.SetAnimator("Walk");
+
+        monster.StartCoroutine(monster.SetExclamationObj());
     }
 
     //상시 실행
