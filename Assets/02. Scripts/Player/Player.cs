@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player : MonoBehaviour
 {
@@ -58,6 +57,10 @@ public class Player : MonoBehaviour
         {
             Debug.Log(collision.tag);
         }
+        if(collision.CompareTag("Item"))
+        {
+            GetComponents<AudioSource>()[1].Play();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -105,7 +108,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _sheild -= damage;
-        GetComponent<AudioSource>().Play();
+        GetComponents<AudioSource>()[0].Play();
 
         if(_sheild <= 0)
         {

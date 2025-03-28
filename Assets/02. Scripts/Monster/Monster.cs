@@ -102,8 +102,12 @@ public class Monster : MonoBehaviour
         GameManager.Instance.LeftMobCount--;
         UIManager.Instance.ReduceMonsterCount();
 
-        GameObject go = PoolManager.Instance.GetObject(DropItemDataSO.Items[Random.Range(0, DropItemDataSO.Items.Length)]);
-        go.transform.position = transform.position;
+        float rate = UnityEngine.Random.value;
+        if (rate < 0.3f)
+        {
+            GameObject go = PoolManager.Instance.GetObject(DropItemDataSO.Items[Random.Range(0, DropItemDataSO.Items.Length)]);
+            go.transform.position = transform.position;
+        }
 
         yield return new WaitForSeconds(audio.length);
 

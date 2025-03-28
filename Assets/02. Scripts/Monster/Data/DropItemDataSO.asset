@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7073aec7835c2ba4d940bbf5819c8393, type: 3}
   m_Name: DropItemDataSO
   m_EditorClassIdentifier: 
-  Items: 0b0000000c0000000d000000
+  Items: 0b0000000c000000
