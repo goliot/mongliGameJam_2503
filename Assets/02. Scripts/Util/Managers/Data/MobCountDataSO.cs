@@ -5,4 +5,5 @@ using UnityEngine;
 public class MobCountDataSO : ScriptableObject
 {
     public List<int> MobCountList;
+    public List<EObjectType> WhichMob;
 }

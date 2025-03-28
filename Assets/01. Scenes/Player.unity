@@ -6885,7 +6885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageLevel: 1
-  MobCountData: {fileID: 0}
+  MobCountData: {fileID: 11400000, guid: 0a503b273b9af24409644282b6c7c835, type: 2}
   spawner: {fileID: 601480918}
   player: {fileID: 1442365398}
 --- !u!1 &945650540

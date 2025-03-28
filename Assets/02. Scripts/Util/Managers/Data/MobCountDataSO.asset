@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: MobCountDataSO
   m_EditorClassIdentifier: 
   MobCountList: 0a000000140000001e0000002800000032000000
+  WhichMob: 02000000
