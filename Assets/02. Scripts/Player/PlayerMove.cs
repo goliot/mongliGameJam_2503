@@ -70,13 +70,14 @@ public class PlayerMove : MonoBehaviour
 
         _rb.linearVelocity = _direction * dashSpeed;
         AfterImage.SetActive(true);
+        //AfterImage.GetComponent<GhostTrailEffect>().ShowGhost();
         Invoke("StopDash", dashDuration);
     }
 
     private void StopDash()
     {
         _isDashing = false;
-        //AfterImage.SetActive(false);
+        AfterImage.SetActive(false);
         //AfterImage.GetComponent<DashAfterImage>().ChaseTarget();
         _rb.linearVelocity = Vector2.zero;
     }

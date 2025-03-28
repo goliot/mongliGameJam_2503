@@ -6,8 +6,32 @@ public class Player : MonoBehaviour
     public PlayerDataSO PlayerData;
 
     private float _health;
+    public float Health
+    {
+        get => _health;
+        set
+        {
+            _health = Mathf.Min(PlayerData.MaxHp, value);
+        }
+    }
     private float _sheild;
+    public float Sheild
+    {
+        get => _sheild;
+        set
+        {
+            _sheild = Mathf.Min(PlayerData.MaxSheild, value);
+        }
+    }
     private float _bulletCount;
+    public float BulletCount
+    {
+        get => _bulletCount;
+        set
+        {
+            _bulletCount = Mathf.Min(value, PlayerData.MaxBullet);
+        }
+    }
 
     Coroutine _reloadCoroutine;
 

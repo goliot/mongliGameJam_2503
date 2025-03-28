@@ -12,10 +12,11 @@ public class PlayerFire : MonoBehaviour
     
     private FollowCamera mainCamera;
     private PlayerDataSO _playerData;
-    
+    private Player _player;
 
     private void Awake()
     {
+        _player = GetComponent<Player>();
         _playerData = GetComponent<Player>().PlayerData;
         mainCamera = Camera.main.GetComponent<FollowCamera>();
     }
@@ -35,6 +36,13 @@ public class PlayerFire : MonoBehaviour
 
     private void Fire()
     {
+        gunSpin.TriggerRecoil();
+
+        if (_player.BulletCount < 0)
+        {
+            return;
+        }
+
         mainCamera.Shake();
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
@@ -52,8 +60,6 @@ public class PlayerFire : MonoBehaviour
         bullet.transform.rotation = rotation;
 
         DropCartridge();
-
-        gunSpin.TriggerRecoil();
     }
 
     private void DropCartridge()
