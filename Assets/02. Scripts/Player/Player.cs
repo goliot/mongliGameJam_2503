@@ -4,6 +4,7 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player : MonoBehaviour
 {
+    public GameObject Gun;
     public PlayerDataSO PlayerData;
     public GameObject ReloadIcon;
     public bool IsReloading = false;
@@ -95,6 +96,7 @@ public class Player : MonoBehaviour
             UIManager.Instance.SetBulletCount(_bulletCount);
             yield return new WaitForSeconds(0.1f);
         }
+        Gun.GetComponent<AudioSource>().Play();
         ReloadIcon.SetActive(false);
         IsReloading = false;
         _reloadCoroutine = null;
@@ -103,6 +105,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _sheild -= damage;
+        GetComponent<AudioSource>().Play();
 
         if(_sheild <= 0)
         {

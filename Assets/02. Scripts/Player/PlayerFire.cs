@@ -79,7 +79,7 @@ public class PlayerFire : MonoBehaviour
         }
 
 
-        _audioSource.Play();
+        //_audioSource.Play();
         _player.BulletCount--;
         UIManager.Instance.SetBulletCount(_player.BulletCount);
         mainCamera.Shake();
