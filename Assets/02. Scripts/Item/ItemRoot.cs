@@ -51,11 +51,12 @@ public abstract class ItemRoot : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            GetComponent<AudioSource>().Play();
             Effect();
             GameObject itemGetVFX = Instantiate(ItemGetVFX, transform.position, Quaternion.identity);
             //itemGetVFX.GetComponent<AudioSource>().Play();
             PoolManager.Instance.ReturnObject(gameObject, ObjectType);
-            GetComponent<AudioSource>().Play();
+
         }
 
         /*if (collision.CompareTag("DestroyZone"))
