@@ -29,6 +29,7 @@ public class GameManager : MonoSingleton<GameManager>
         if (DeadTime <= 0)
         {
             GameOver();
+            UIManager.Instance.SetEndTime();
         }
 
         if(Input.GetKeyDown(KeyCode.P))
@@ -40,6 +41,7 @@ public class GameManager : MonoSingleton<GameManager>
         {
             Victory();
         }
+        UIManager.Instance.SetEndTime(DeadTime);
     }
 
     //다음 레벨로 갈 경우
