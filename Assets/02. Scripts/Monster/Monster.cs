@@ -51,6 +51,10 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         fsm.Update();
 
         if(_health <= 0)

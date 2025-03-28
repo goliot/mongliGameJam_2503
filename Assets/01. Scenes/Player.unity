@@ -6990,6 +6990,7 @@ MonoBehaviour:
   MobCountData: {fileID: 11400000, guid: 0a503b273b9af24409644282b6c7c835, type: 2}
   spawner: {fileID: 601480918}
   player: {fileID: 1442365398}
+  IsGameOver: 0
 --- !u!1 &945650540
 GameObject:
   m_ObjectHideFlags: 0
@@ -25580,11 +25581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002290355116386687, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9002290355116386687, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9002290355116386687, guid: d5326cb0f8efd10468acf36e10488a1c, type: 3}
       propertyPath: m_LocalPosition.z

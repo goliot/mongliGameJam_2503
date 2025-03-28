@@ -69,6 +69,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         if(Input.GetKeyDown(KeyCode.R) && _reloadCoroutine == null)
         {
             Reload();
@@ -117,6 +121,6 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        //TODO : Die ø¨√‚
+        GameManager.Instance.GameOver();
     }
 }

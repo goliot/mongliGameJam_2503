@@ -32,6 +32,10 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         GetInput();
         Move();
         SetAnimation();

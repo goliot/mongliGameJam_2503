@@ -9,11 +9,21 @@ public class GameManager : MonoSingleton<GameManager>
     public Player player;
 
     public Action GameOverAction;
+    public bool IsGameOver = false;
 
     private void Start()
     {
+        IsGameOver = false;
         spawner.Spawn(spawner.GetRandomPosition(), MobCountData.MobCountList[StageLevel]);
         UIManager.Instance.SetMonsterCount(MobCountData.MobCountList[0]);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            GameOver();
+        }
     }
 
     //다음 레벨로 갈 경우
@@ -29,6 +39,10 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void GameOver()
     {
+        IsGameOver = true;
+
         GameOverAction?.Invoke();
+
+        player.GetComponent<Animator>().SetTrigger("Die");
     }
 }

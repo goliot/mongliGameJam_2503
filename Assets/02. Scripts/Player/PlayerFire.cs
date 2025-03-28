@@ -21,8 +21,17 @@ public class PlayerFire : MonoBehaviour
         mainCamera = Camera.main.GetComponent<FollowCamera>();
     }
 
+    private void Start()
+    {
+        GameManager.Instance.GameOverAction += () => Gun.SetActive(false);
+    }
+
     private void Update()
     {
+        if(GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         _timer += Time.deltaTime;
         if(Input.GetMouseButton(0))
         {
