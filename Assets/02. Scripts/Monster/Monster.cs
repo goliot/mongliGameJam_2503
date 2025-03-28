@@ -10,6 +10,8 @@ public class Monster : MonoBehaviour
 {
     [SerializeField]
     private MonsterDataSO MonsterDataSO;
+    [SerializeField]
+    private DropItemDataSO DropItemDataSO;
 
     public MonsterFsm fsm;
     private MonsterFsmFactory fsmFactory;
@@ -99,6 +101,9 @@ public class Monster : MonoBehaviour
         }
         GameManager.Instance.LeftMobCount--;
         UIManager.Instance.ReduceMonsterCount();
+
+        GameObject go = PoolManager.Instance.GetObject(DropItemDataSO.Items[Random.Range(0, DropItemDataSO.Items.Length)]);
+        go.transform.position = transform.position;
 
         yield return new WaitForSeconds(audio.length);
 
