@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Threading;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -145,17 +146,22 @@ public class Monster : MonoBehaviour
                         });
     }
 
-    public void SetExclamationObj(bool active)
-    {
-        ExclamationObj.SetActive(active);
-    }
-
     public IEnumerator SetExclamationObj()
     {
         ExclamationObj.SetActive(true);
         yield return new WaitForSeconds(1f);
         ExclamationObj.SetActive(false);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Player>().TakeDamage(GetInfo().attackPower);
+            Debug.Log($"Monster Attack to Player : {GetInfo().attackPower}");
+        }
+    }
+
 
 
 
