@@ -14,4 +14,5 @@ public enum EObjectType
     HealItem,
     AtkItem,
     SpeedItem,
+    Box,
 }

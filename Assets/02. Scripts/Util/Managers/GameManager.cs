@@ -19,7 +19,8 @@ public class GameManager : MonoSingleton<GameManager>
     {
         LeftMobCount = MobCountData.MobCountList[StageLevel];
         IsGameOver = false;
-        spawner.Spawn(spawner.GetRandomPosition(), MobCountData.MobCountList[StageLevel]);
+        spawner.Spawn(EObjectType.Zombie, MobCountData.MobCountList[StageLevel]);
+        spawner.Spawn(EObjectType.Box, 10);
         UIManager.Instance.SetMonsterCount(MobCountData.MobCountList[StageLevel]);
     }
 

@@ -54,4 +54,14 @@ public class Spawner : MonoBehaviour
             zombie.transform.position = nextPosition;
         }
     }
+
+    public void Spawn(EObjectType type, int count)
+    {
+        for(int i=0; i<count; i++)
+        {
+            Vector3 nextPosition = GetRandomPosition();
+            GameObject go = PoolManager.Instance.GetObject(type);
+            go.transform.position = nextPosition;
+        }
+    }
 }

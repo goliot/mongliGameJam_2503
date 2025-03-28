@@ -45,10 +45,10 @@ public class PlayerFire : MonoBehaviour
                 Fire();
             }
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             ChangeWeapon();
-        }
+        }*/
         /*if (Input.GetMouseButtonDown(1))
         {
             GameObject go = PoolManager.Instance.GetObject(EObjectType.Grenade);
