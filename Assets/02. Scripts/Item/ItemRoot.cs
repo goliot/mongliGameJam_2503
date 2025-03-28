@@ -6,6 +6,7 @@ public abstract class ItemRoot : MonoBehaviour
     public float Speed = 5f;
 
     [SerializeField] private EObjectType _objectType;
+
     public EObjectType ObjectType
     {
         get => _objectType;
@@ -54,6 +55,7 @@ public abstract class ItemRoot : MonoBehaviour
             GameObject itemGetVFX = Instantiate(ItemGetVFX, transform.position, Quaternion.identity);
             //itemGetVFX.GetComponent<AudioSource>().Play();
             PoolManager.Instance.ReturnObject(gameObject, ObjectType);
+            GetComponent<AudioSource>().Play();
         }
 
         /*if (collision.CompareTag("DestroyZone"))
