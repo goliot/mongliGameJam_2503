@@ -40,6 +40,11 @@ public class Player : MonoBehaviour
         _health = PlayerData.MaxHp;
         _bulletCount = PlayerData.MaxBullet;
         _sheild = PlayerData.MaxSheild;
+
+        UIManager.Instance.SetHealthBar(_health, PlayerData.MaxHp);
+        UIManager.Instance.SetSheildBar(_sheild, PlayerData.MaxSheild);
+        UIManager.Instance.SetBulletCount((int)_bulletCount);
+        UIManager.Instance.SetMaxBulletCount(PlayerData.MaxBullet);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,7 +101,10 @@ public class Player : MonoBehaviour
             _health += _sheild;
             _sheild = 0;
         }
-        if(_health <= 0)
+        UIManager.Instance.SetHealthBar(Health, PlayerData.MaxHp);
+        UIManager.Instance.SetSheildBar(Sheild, PlayerData.MaxSheild);
+        UIManager.Instance.ShowPlayerMask();
+        if (_health <= 0)
         {
             Die();
         }

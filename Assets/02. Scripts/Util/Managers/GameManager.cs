@@ -10,6 +10,13 @@ public class GameManager : MonoSingleton<GameManager>
     private void Start()
     {
         spawner.Spawn(spawner.GetRandomPosition(), MobCountData.MobCountList[StageLevel]);
+        UIManager.Instance.SetMonsterCount(MobCountData.MobCountList[0]);
+    }
+
+    //다음 레벨로 갈 경우
+    private void NextLevel()
+    {
+        UIManager.Instance.SetMonsterCount(MobCountData.MobCountList[StageLevel]);
     }
 
     public void Victory()

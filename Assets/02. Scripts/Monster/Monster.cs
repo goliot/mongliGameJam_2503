@@ -64,6 +64,7 @@ public class Monster : MonoBehaviour
                 part.transform.position = transform.position;
             }
             PoolManager.Instance.ReturnObject(this.gameObject, EObjectType.Zombie);
+            UIManager.Instance.ReduceMonsterCount();
         }
     }
 
@@ -158,7 +159,6 @@ public class Monster : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Player>().TakeDamage(GetInfo().attackPower);
-            Debug.Log($"Monster Attack to Player : {GetInfo().attackPower}");
         }
     }
 
