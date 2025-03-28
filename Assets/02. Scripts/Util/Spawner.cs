@@ -8,6 +8,12 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawnTime;
     private float _time = 0f;
 
+
+    private void Awake()
+    {
+        GameManager.Instance.GameOverAction += () => gameObject.SetActive(false);
+    }
+
     private void Update()
     {
         _time += Time.deltaTime;

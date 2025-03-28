@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
@@ -6,6 +7,8 @@ public class GameManager : MonoSingleton<GameManager>
     public MobCountDataSO MobCountData;
     public Spawner spawner;
     public Player player;
+
+    public Action GameOverAction;
 
     private void Start()
     {
@@ -26,6 +29,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void GameOver()
     {
-
+        GameOverAction?.Invoke();
     }
 }
