@@ -6,6 +6,7 @@ public class Deco : MonoBehaviour
 {
     private SpriteRenderer _sr;
     [SerializeField] private DropItemDataSO dropItem;
+    [SerializeField] private AudioClip[] cilps;
 
     private int _hitCounter = 3;
 
@@ -18,6 +19,8 @@ public class Deco : MonoBehaviour
     {
         if(collision.CompareTag("Bullet"))
         {
+            //GetComponent<AudioSource>().PlayOneShot(cilps[0]);
+            GetComponent<AudioSource>().Play();
             _sr.DOColor(Color.yellow, 0.1f).OnComplete(() => _sr.DOColor(Color.white, 0.1f));
             transform.DOShakePosition(0.1f, 0.01f);
             _hitCounter--;
