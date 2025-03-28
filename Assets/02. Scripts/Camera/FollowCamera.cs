@@ -10,7 +10,6 @@ public class FollowCamera : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     [Header("# Camera Shake")]
-    public bool isShaking = false;
     public float ShakeAmount = 0.1f;
     public float ShakeDuration = 0.5f;
     private float _shakeTimer = 0f;
@@ -66,7 +65,13 @@ public class FollowCamera : MonoBehaviour
 
     public void Shake()
     {
-        isShaking = true;
+        ShakeAmount = 0.1f;
+        _shakeTimer = ShakeDuration;
+    }
+
+    public void Shake(float shakeAmount)
+    {
+        ShakeAmount = shakeAmount;
         _shakeTimer = ShakeDuration;
     }
 }

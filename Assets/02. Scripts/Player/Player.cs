@@ -1,9 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player : MonoBehaviour
 {
     public PlayerDataSO PlayerData;
+    public GameObject ReloadIcon;
+    public bool IsReloading = false;
 
     private float _health;
     public float Health
@@ -66,30 +69,30 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.R) && _reloadCoroutine == null)
         {
             Reload();
         }
-        if(Input.GetMouseButtonDown(0) && _reloadCoroutine != null)
-        {
-            StopCoroutine(_reloadCoroutine);
-            _reloadCoroutine = null;
-        }
     }
 
-    private void Reload()
+    public void Reload()
     {
         _reloadCoroutine = StartCoroutine(CoReload());
     }
 
     IEnumerator CoReload()
     {
+        IsReloading = true;
+        ReloadIcon.SetActive(true);
         while(_bulletCount < PlayerData.MaxBullet)
         {
             // cross hair 리로드 전용으로 바꾸기
             _bulletCount += 1;
+            UIManager.Instance.SetBulletCount(_bulletCount);
             yield return new WaitForSeconds(0.1f);
         }
+        ReloadIcon.SetActive(false);
+        IsReloading = false;
         _reloadCoroutine = null;
     }
 
@@ -102,7 +105,7 @@ public class Player : MonoBehaviour
             _health += _sheild;
             _sheild = 0;
         }
-        Camera.main.GetComponent<FollowCamera>().Shake();
+        Camera.main.GetComponent<FollowCamera>().Shake(0.5f);
         UIManager.Instance.SetHealthBar(Health, PlayerData.MaxHp);
         UIManager.Instance.SetSheildBar(Sheild, PlayerData.MaxSheild);
         UIManager.Instance.ShowPlayerMask();
