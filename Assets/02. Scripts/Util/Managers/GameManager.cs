@@ -13,11 +13,14 @@ public class GameManager : MonoSingleton<GameManager>
     public Action GameOverAction;
     public bool IsGameOver = false;
 
+    public int LeftMobCount;
+
     private void Start()
     {
+        LeftMobCount = MobCountData.MobCountList[StageLevel];
         IsGameOver = false;
         spawner.Spawn(spawner.GetRandomPosition(), MobCountData.MobCountList[StageLevel]);
-        UIManager.Instance.SetMonsterCount(MobCountData.MobCountList[0]);
+        UIManager.Instance.SetMonsterCount(MobCountData.MobCountList[StageLevel]);
     }
 
     private void Update()
@@ -32,6 +35,11 @@ public class GameManager : MonoSingleton<GameManager>
         {
             GameOver();
         }
+
+        if(LeftMobCount <= 0)
+        {
+            Victory();
+        }
     }
 
     //다음 레벨로 갈 경우
@@ -42,7 +50,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void Victory()
     {
-
+        
     }
 
     public void GameOver()

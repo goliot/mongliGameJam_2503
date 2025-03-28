@@ -67,8 +67,9 @@ public class Monster : MonoBehaviour
                 GameObject part = PoolManager.Instance.GetObject(EObjectType.ZombiePart);
                 part.transform.position = transform.position;
             }
-            PoolManager.Instance.ReturnObject(this.gameObject, EObjectType.Zombie);
+            GameManager.Instance.LeftMobCount--;
             UIManager.Instance.ReduceMonsterCount();
+            PoolManager.Instance.ReturnObject(this.gameObject, EObjectType.Zombie);
         }
     }
 

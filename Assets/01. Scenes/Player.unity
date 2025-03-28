@@ -6990,7 +6990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb6e840afe1a744692ed66e524cc88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeadTime: 0
+  DeadTime: 120
   StageLevel: 1
   MobCountData: {fileID: 11400000, guid: 0a503b273b9af24409644282b6c7c835, type: 2}
   spawner: {fileID: 601480918}
@@ -25704,7 +25704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5242064536730952893
 Transform:
   m_ObjectHideFlags: 0
