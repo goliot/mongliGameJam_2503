@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: 
   MaxHp: 100
+  MaxSheild: 60
   OriginalDamage: 10
   NowDamage: 10
   OriginalSpeed: 5
