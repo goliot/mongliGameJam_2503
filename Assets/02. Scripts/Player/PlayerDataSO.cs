@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerDataSO : ScriptableObject
 {
     public float MaxHp;
+    public float MaxSheild;
+    public int MaxBullet;
     public float OriginalDamage;
     public float NowDamage;
     public float OriginalSpeed;
