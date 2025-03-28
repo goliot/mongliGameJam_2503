@@ -23,8 +23,8 @@ public class Player : MonoBehaviour
             _sheild = Mathf.Min(PlayerData.MaxSheild, value);
         }
     }
-    private float _bulletCount;
-    public float BulletCount
+    private int _bulletCount;
+    public int BulletCount
     {
         get => _bulletCount;
         set
