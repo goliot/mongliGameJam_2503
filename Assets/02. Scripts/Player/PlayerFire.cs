@@ -11,6 +11,7 @@ public class PlayerFire : MonoBehaviour
     private float _timer = 0f;
     private int _currnetWeaponIndex = 0;
     private GameObject _currentWeapon;
+    private AudioSource _audioSource;
 
     [SerializeField] private GunSpin gunSpin;
     
@@ -23,6 +24,7 @@ public class PlayerFire : MonoBehaviour
         _player = GetComponent<Player>();
         _playerData = GetComponent<Player>().PlayerData;
         mainCamera = Camera.main.GetComponent<FollowCamera>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -67,7 +69,7 @@ public class PlayerFire : MonoBehaviour
     {
         gunSpin.TriggerRecoil();
 
-        if (_player.BulletCount <= 0 || _player.IsReloading)
+        if (_player.BulletCount <= 0)
         {
             if (!_player.IsReloading)
             {
@@ -75,6 +77,9 @@ public class PlayerFire : MonoBehaviour
             }
             return;
         }
+
+
+        _audioSource.Play();
         _player.BulletCount--;
         UIManager.Instance.SetBulletCount(_player.BulletCount);
         mainCamera.Shake();
