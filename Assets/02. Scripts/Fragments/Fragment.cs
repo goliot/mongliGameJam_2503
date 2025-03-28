@@ -24,6 +24,9 @@ public class Fragment : MonoBehaviour
     private Vector2 _originalShadowScale;
     private Color _originColor;
 
+    [SerializeField]
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         _originalShadowScale = shadow.transform.localScale;
@@ -32,6 +35,8 @@ public class Fragment : MonoBehaviour
 
     void OnEnable()
     {
+        if(_audioSource != null)
+            _audioSource?.Stop();
         InitVariable();
         currentheight = Random.Range(yForce - 1, yForce);
         maxHeight = currentheight;
@@ -86,6 +91,8 @@ public class Fragment : MonoBehaviour
             else
             {
                 isGrounded = true;
+                if (_audioSource != null)
+                    _audioSource?.Play();
                 cartridge.GetComponent<Rigidbody2D>().angularVelocity = 0;
                 cartridge.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 0), 30f).SetEase(Ease.InExpo).OnComplete(() => ReleaseToPool());
                 shadow.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 0), 30f).SetEase(Ease.InExpo).OnComplete(() => ReleaseToPool());

@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterDataSO: {fileID: 11400000, guid: 228f8fc717d9fe445b1651a58008656c, type: 2}
+  DropItemDataSO: {fileID: 11400000, guid: e365e6fb2f2db614db00695868b31075, type: 2}
   healthBarObj: {fileID: 1503627737719080877}
   healthBar: {fileID: 4984222362500763877}
   ExclamationObj: {fileID: 3626962499438382850}
