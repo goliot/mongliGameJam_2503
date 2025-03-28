@@ -31,6 +31,7 @@ public class GameManager : MonoSingleton<GameManager>
         {
             GameOver();
             UIManager.Instance.SetEndTime();
+            UIManager.Instance.ShowResult(false);
         }
 
         if(Input.GetKeyDown(KeyCode.P))
@@ -41,6 +42,7 @@ public class GameManager : MonoSingleton<GameManager>
         if(LeftMobCount <= 0)
         {
             Victory();
+            UIManager.Instance.ShowResult(true);
         }
         UIManager.Instance.SetEndTime(DeadTime);
     }
@@ -63,5 +65,6 @@ public class GameManager : MonoSingleton<GameManager>
         GameOverAction?.Invoke();
 
         player.GetComponent<Animator>().SetTrigger("Die");
+        UIManager.Instance.ShowResult(false);
     }
 }
