@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
 {
+    [SerializeField] private GameObject[] Weapons;
     [SerializeField] private GameObject Gun;
     [SerializeField] private Transform Muzzle;
     [SerializeField] private GameObject EmptyCartridge;
+    [SerializeField] private GameObject Grenade;
 
     private float _timer = 0f;
+    private int _currnetWeaponIndex = 0;
+    private GameObject _currentWeapon;
 
     [SerializeField] private GunSpin gunSpin;
     
@@ -41,6 +45,22 @@ public class PlayerFire : MonoBehaviour
                 Fire();
             }
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ChangeWeapon();
+        }
+        /*if (Input.GetMouseButtonDown(1))
+        {
+            GameObject go = PoolManager.Instance.GetObject(EObjectType.Grenade);
+            go.transform.position = transform.position;
+        }*/
+    }
+
+    private void ChangeWeapon()
+    {
+        GetComponent<Animator>().SetTrigger("WeaponChange");
+
+        _currentWeapon = Weapons[++_currnetWeaponIndex % 2];
     }
 
     private void Fire()

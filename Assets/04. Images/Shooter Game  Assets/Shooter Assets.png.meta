@@ -1,0 +1,1493 @@
+fileFormatVersion: 2
+guid: c8b61830abc6db64e963c504991f4e13
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5836866376741645151
+    second: Shooter Assets_0
+  - first:
+      213: 829462908264395488
+    second: Shooter Assets_1
+  - first:
+      213: -8209852059145700854
+    second: Shooter Assets_2
+  - first:
+      213: 4275382773364906561
+    second: Shooter Assets_3
+  - first:
+      213: -8539031456675151729
+    second: Shooter Assets_4
+  - first:
+      213: -6027303158325981931
+    second: Shooter Assets_5
+  - first:
+      213: 5204087741060868975
+    second: Shooter Assets_6
+  - first:
+      213: -7961819189728173855
+    second: Shooter Assets_7
+  - first:
+      213: -793777021588203889
+    second: Shooter Assets_8
+  - first:
+      213: -5027535855588878492
+    second: Shooter Assets_9
+  - first:
+      213: 5532114468115948173
+    second: Shooter Assets_10
+  - first:
+      213: -9153494477610036441
+    second: Shooter Assets_11
+  - first:
+      213: 8506660377506961246
+    second: Shooter Assets_12
+  - first:
+      213: -2655653708867634810
+    second: Shooter Assets_13
+  - first:
+      213: 2144756092832770455
+    second: Shooter Assets_14
+  - first:
+      213: -560125605337618554
+    second: Shooter Assets_15
+  - first:
+      213: 8282197259547749524
+    second: Shooter Assets_16
+  - first:
+      213: -7205759285826708454
+    second: Shooter Assets_17
+  - first:
+      213: 4669015989623755420
+    second: Shooter Assets_18
+  - first:
+      213: 146437759212024454
+    second: Shooter Assets_19
+  - first:
+      213: 1628163194599829141
+    second: Shooter Assets_20
+  - first:
+      213: -6596012823276488511
+    second: Shooter Assets_21
+  - first:
+      213: 3560686724730718993
+    second: Shooter Assets_22
+  - first:
+      213: 5698652927112962146
+    second: Shooter Assets_23
+  - first:
+      213: -2441286111233535733
+    second: Shooter Assets_24
+  - first:
+      213: -6062563343418297364
+    second: Shooter Assets_25
+  - first:
+      213: 3883198666028997738
+    second: Shooter Assets_26
+  - first:
+      213: -5920044592814067398
+    second: Shooter Assets_27
+  - first:
+      213: 2320628011962929221
+    second: Shooter Assets_28
+  - first:
+      213: 1378172022129075237
+    second: Shooter Assets_29
+  - first:
+      213: -4348745252581476717
+    second: Shooter Assets_30
+  - first:
+      213: -3647259184600505440
+    second: Shooter Assets_31
+  - first:
+      213: -8918102466914222060
+    second: Shooter Assets_32
+  - first:
+      213: -6848907149378088173
+    second: Shooter Assets_33
+  - first:
+      213: -5834230873325023728
+    second: Shooter Assets_34
+  - first:
+      213: -8398381176368562769
+    second: Shooter Assets_35
+  - first:
+      213: -1997498738241924192
+    second: Shooter Assets_36
+  - first:
+      213: 1887087696745812227
+    second: Shooter Assets_37
+  - first:
+      213: -5697686665993314879
+    second: Shooter Assets_38
+  - first:
+      213: 2137468212712911200
+    second: Shooter Assets_39
+  - first:
+      213: 1413123138245022308
+    second: Shooter Assets_40
+  - first:
+      213: 3430174216525420282
+    second: Shooter Assets_41
+  - first:
+      213: 2907237453339698107
+    second: Shooter Assets_42
+  - first:
+      213: -2926519992618257928
+    second: Shooter Assets_43
+  - first:
+      213: -2089538281716206780
+    second: Shooter Assets_44
+  - first:
+      213: 7640390533000763357
+    second: Shooter Assets_45
+  - first:
+      213: -2984387740487696251
+    second: Shooter Assets_46
+  - first:
+      213: 5953664041752639962
+    second: Shooter Assets_47
+  - first:
+      213: -1050697609182159037
+    second: Shooter Assets_48
+  - first:
+      213: -4214727774202604080
+    second: Shooter Assets_49
+  - first:
+      213: -8413600173905125211
+    second: Shooter Assets_50
+  - first:
+      213: 1716412686414681496
+    second: Shooter Assets_51
+  - first:
+      213: 7369068893808871981
+    second: Shooter Assets_52
+  - first:
+      213: -6723634969096360235
+    second: Shooter Assets_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shooter Assets_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 211
+        width: 71
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a494e494f84ffea0800000000000000
+      internalID: -5836866376741645151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 211
+        width: 71
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e23671de18d28b00800000000000000
+      internalID: 829462908264395488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 238
+        width: 63
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a7c14cc0fb01e80800000000000000
+      internalID: -8209852059145700854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 229
+        width: 63
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a5d3dfaf5355b30800000000000000
+      internalID: 4275382773364906561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 220
+        width: 45
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80cdf2c1244f7980800000000000000
+      internalID: -8539031456675151729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 211
+        width: 45
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dc36626b7ba5ca0800000000000000
+      internalID: -6027303158325981931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 173
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6be5e16a32a83840800000000000000
+      internalID: 5204087741060868975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 197
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e02d5661afe18190800000000000000
+      internalID: -7961819189728173855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 173
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f861e552100fbf4f0800000000000000
+      internalID: -793777021588203889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 204
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467d510c6ca9a3ab0800000000000000
+      internalID: -5027535855588878492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 203
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82a9d06cc406cc40800000000000000
+      internalID: 5532114468115948173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 202
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723dd88154148f080800000000000000
+      internalID: -9153494477610036441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_12
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 201
+        width: 63
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57513a0b8abd0670800000000000000
+      internalID: 8506660377506961246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 185
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689fe74a509352bd0800000000000000
+      internalID: -2655653708867634810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 193
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799e6239d44b3cd10800000000000000
+      internalID: 2144756092832770455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_15
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 184
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6872048cab80a38f0800000000000000
+      internalID: -560125605337618554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_16
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 193
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cae0fc68640f270800000000000000
+      internalID: 8282197259547749524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_17
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 184
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c93577b10000c90800000000000000
+      internalID: -7205759285826708454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_18
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 193
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9294281e4dabc040800000000000000
+      internalID: 4669015989623755420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_19
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 184
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682798bbd50480200800000000000000
+      internalID: 146437759212024454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_20
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 192
+        width: 63
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59eec729cc5689610800000000000000
+      internalID: 1628163194599829141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 91
+        width: 71
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8feaec8414674a0800000000000000
+      internalID: -6596012823276488511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 173
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b0608f5b91a6130800000000000000
+      internalID: 3560686724730718993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_23
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 91
+        width: 71
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260eecaf4aea51f40800000000000000
+      internalID: 5698652927112962146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_24
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 175
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0194d0673fce1ed0800000000000000
+      internalID: -2441286111233535733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_25
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 175
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce37f3f82c27ddba0800000000000000
+      internalID: -6062563343418297364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_26
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 175
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cdde8dc94e3e530800000000000000
+      internalID: 3883198666028997738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_27
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 125
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3178defec6c7dda0800000000000000
+      internalID: -5920044592814067398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_28
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 148
+        width: 70
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5401fd4b1e6843020800000000000000
+      internalID: 2320628011962929221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_29
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 175
+        width: 43
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524a26af620402310800000000000000
+      internalID: 1378172022129075237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_30
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 125
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396f631cb3726a3c0800000000000000
+      internalID: -4348745252581476717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_31
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 140
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a32b1a7815526dc0800000000000000
+      internalID: -3647259184600505440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_32
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 148
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4100b057e098c3480800000000000000
+      internalID: -8918102466914222060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_33
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 91
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3139fa51c3bc3f0a0800000000000000
+      internalID: -6848907149378088173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 74
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e48d98ee5a80fa0800000000000000
+      internalID: -5834230873325023728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 143
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad793e01d4f27b80800000000000000
+      internalID: -8398381176368562769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_36
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 81
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a39cc31b757744e0800000000000000
+      internalID: -1997498738241924192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 73
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3015b801348403a10800000000000000
+      internalID: 1887087696745812227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_38
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 81
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd1df73a20cde0b0800000000000000
+      internalID: -5697686665993314879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_39
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 73
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0613171c300d9ad10800000000000000
+      internalID: 2137468212712911200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_40
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 81
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462daf6d10c6c9310800000000000000
+      internalID: 1413123138245022308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_41
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 81
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af693bda64d6a9f20800000000000000
+      internalID: 3430174216525420282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_42
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 81
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb326048f05985820800000000000000
+      internalID: 2907237453339698107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_43
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 81
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1f8e37299e267d0800000000000000
+      internalID: -2926519992618257928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_44
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 44
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443b9bde0087003e0800000000000000
+      internalID: -2089538281716206780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_45
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 53
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd794c095be180a60800000000000000
+      internalID: 7640390533000763357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_46
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 44
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580433879235596d0800000000000000
+      internalID: -2984387740487696251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_47
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 54
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9bea0f6e9af9250800000000000000
+      internalID: 5953664041752639962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_48
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 58
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f585e571c2b61f0800000000000000
+      internalID: -1050697609182159037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_49
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 49
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d55ea18b674285c0800000000000000
+      internalID: -4214727774202604080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_50
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 44
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a068301833ec3b80800000000000000
+      internalID: -8413600173905125211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_51
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 62
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89598bd8e3ce1d710800000000000000
+      internalID: 1716412686414681496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_52
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 62
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2acbdcad11344660800000000000000
+      internalID: 7369068893808871981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter Assets_53
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 44
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5deed937e99d0b2a0800000000000000
+      internalID: -6723634969096360235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

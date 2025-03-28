@@ -7,4 +7,11 @@ public enum EObjectType
     Blood,
     DamageNum,
     WallFragment,
+    Grenade,
+    Fuse,
+    Pin,
+    SafePin,
+    HealItem,
+    AtkItem,
+    SpeedItem,
 }

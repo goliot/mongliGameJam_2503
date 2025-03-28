@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Grenade : MonoBehaviour
@@ -9,10 +10,18 @@ public class Grenade : MonoBehaviour
 
     private bool hasExploded = false; // 중복 폭발 방지
 
-    void Start()
+    public List<EObjectType> Parts;
+
+    void OnEnable()
     {
         // 일정 시간이 지나면 폭발하도록 설정
         Invoke("Explode", explosionDelay);
+        for(int i=0; i<Parts.Count; i++)
+        {
+            GameObject go = PoolManager.Instance.GetObject(Parts[i]);
+            go.transform.position = transform.position;
+        }
+        Explode();
     }
 
     void Explode()
@@ -38,7 +47,7 @@ public class Grenade : MonoBehaviour
         }
 
         // 수류탄 오브젝트 제거
-        Destroy(gameObject);
+        PoolManager.Instance.ReturnObject(transform.parent.gameObject, EObjectType.Grenade);
     }
 
     void OnDrawGizmosSelected()
