@@ -12,4 +12,10 @@ public class PlayerDataSO : ScriptableObject
     public float NowSpeed;
     public float OriginalAtkSpeed;
     public float NowAtkSpeed;
+
+    private void Awake()
+    {
+        NowDamage = OriginalDamage;
+        NowSpeed = OriginalSpeed;
+    }
 }
