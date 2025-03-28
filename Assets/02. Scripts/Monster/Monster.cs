@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using System.Threading;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,8 @@ public class Monster : MonoBehaviour
     private GameObject healthBarObj;
     [SerializeField]
     private Image healthBar;
+    [SerializeField]
+    private GameObject ExclamationObj;
 
     private float _health = 0;
 
@@ -32,6 +35,7 @@ public class Monster : MonoBehaviour
     {
         _health = MonsterDataSO.maxHealth;
         healthBarObj.SetActive(false);
+        ExclamationObj.SetActive(false);
     }
 
     void Start()
@@ -140,6 +144,20 @@ public class Monster : MonoBehaviour
                                                 });
                         });
     }
+
+    public void SetExclamationObj(bool active)
+    {
+        ExclamationObj.SetActive(active);
+    }
+
+    public IEnumerator SetExclamationObj()
+    {
+        ExclamationObj.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        ExclamationObj.SetActive(false);
+    }
+
+
 
     private void OnDrawGizmos()
     {

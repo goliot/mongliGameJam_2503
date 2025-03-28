@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -17,7 +19,14 @@ public class MonsterState_Attack : MonsterState
         monster.SetAnimator("Attack");
         isAttackAnimationFinished = false;
         monster.GetTargetPos().GetComponent<Player>().TakeDamage(monster.GetInfo().attackPower);
-        Debug.Log($"Monster Give Damge : {monster.GetInfo().attackPower}");
+
+        monster.StartCoroutine(monster.SetExclamationObj());
+
+        //Enter로 들어가는 순간 플레이어를 향해 돌진
+        Vector3 directionToPlayer = (monster.GetTargetPos().position - monster.transform.position).normalized;
+
+        monster.transform.DOMove(monster.GetTargetPos().position, monster.GetInfo().chargeDistance / monster.GetInfo().chargeSpeed)
+                     .SetEase(Ease.OutQuad);
     }
 
     public override void Update()
@@ -44,4 +53,5 @@ public class MonsterState_Attack : MonsterState
         }
 
     }
+
 }

@@ -15,5 +15,9 @@ public class MonsterDataSO : ScriptableObject
     public float attackRange;
     //추적 범위
     public float chaseRange;
+    //돌진 거리
+    public float chargeDistance;
+    //돌진 속도
+    public float chargeSpeed;
     
 }

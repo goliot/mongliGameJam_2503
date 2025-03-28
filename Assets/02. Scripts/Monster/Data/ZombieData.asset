@@ -16,5 +16,7 @@ MonoBehaviour:
   attackPower: 10
   moveSpeed: 1
   waitTime: 1.5
-  attackRange: 1
-  chaseRange: 7
+  attackRange: 4
+  chaseRange: 6
+  chargeDistance: 4
+  chargeSpeed: 5
