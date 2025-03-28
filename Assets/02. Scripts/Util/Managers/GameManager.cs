@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    public float DeadTime;
+
     public int StageLevel;
     public MobCountDataSO MobCountData;
     public Spawner spawner;
@@ -20,6 +22,12 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Update()
     {
+        DeadTime -= Time.deltaTime;
+        if (DeadTime <= 0)
+        {
+            GameOver();
+        }
+
         if(Input.GetKeyDown(KeyCode.P))
         {
             GameOver();
