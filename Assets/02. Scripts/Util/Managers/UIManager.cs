@@ -61,13 +61,6 @@ public class UIManager : MonoSingleton<UIManager>
             .OnKill(() => TfBulletCount.DOFade(1, 0.2f));
     }
 
-    public void SetBulletCount()
-    {
-        TfBulletCount.text = (int.Parse(TfBulletCount.text) - 1).ToString();
-        TfBulletCount.DOFade(0, 0.2f)
-            .OnKill(() => TfBulletCount.DOFade(1, 0.2f));
-    }
-
     public void SetMaxBulletCount(int count)
     {
         TfMaxBulletCount.text = count.ToString();
@@ -78,7 +71,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void ShowPlayerMask(float duration = 0.5f)
     {
         Image maskImage = playerMaskObj.GetComponent<Image>();
-        maskImage.color = new Color(maskImage.color.r, maskImage.color.g, maskImage.color.b, 1f);
+        maskImage.color = new Color(maskImage.color.r, maskImage.color.g, maskImage.color.b, 0.8f);
         playerMaskObj.SetActive(true);  // 마스크 활성화
         playerMaskObj.GetComponent<Image>().DOFade(0, duration)  // 마스크의 알파 값을 0으로 바꿔서 서서히 사라지게 함
             .OnKill(() => playerMaskObj.SetActive(false));  // 애니메이션 끝난 후 마스크 비활성화

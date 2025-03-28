@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
             _health += _sheild;
             _sheild = 0;
         }
+        Camera.main.GetComponent<FollowCamera>().Shake();
         UIManager.Instance.SetHealthBar(Health, PlayerData.MaxHp);
         UIManager.Instance.SetSheildBar(Sheild, PlayerData.MaxSheild);
         UIManager.Instance.ShowPlayerMask();
