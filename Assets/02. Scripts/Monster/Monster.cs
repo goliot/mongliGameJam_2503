@@ -16,6 +16,8 @@ public class Monster : MonoBehaviour
     private Transform playerTarget;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private CapsuleCollider2D capsuleCollider;
+    private Rigidbody2D rigidbody;
 
     [SerializeField]
     private GameObject healthBarObj;
@@ -24,12 +26,22 @@ public class Monster : MonoBehaviour
     [SerializeField]
     private GameObject ExclamationObj;
 
+    //오디오 클립
+    [SerializeField]
+    private AudioClip[] DeathAudioClips;
+    [SerializeField]
+    private AudioSource AudioSource;
+    
     private float _health = 0;
+    private bool isDead = false;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        //AudioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -37,6 +49,10 @@ public class Monster : MonoBehaviour
         _health = MonsterDataSO.maxHealth;
         healthBarObj.SetActive(false);
         ExclamationObj.SetActive(false);
+        spriteRenderer.enabled = true;
+        capsuleCollider.enabled = true;
+        isDead = false;
+
     }
 
     void Start()
@@ -57,21 +73,39 @@ public class Monster : MonoBehaviour
         }
         fsm.Update();
 
-        if(_health <= 0)
+        if(_health <= 0 && !isDead)
         {
-            //사망 처리
-            //애니매이션 없이, 시체 보여주면서 objectPool로 return
-            int partCount = Random.Range(2, 3);
-            for (int i = 0; i < partCount; i++)
-            {
-                GameObject part = PoolManager.Instance.GetObject(EObjectType.ZombiePart);
-                part.transform.position = transform.position;
-            }
-            GameManager.Instance.LeftMobCount--;
-            UIManager.Instance.ReduceMonsterCount();
-            PoolManager.Instance.ReturnObject(this.gameObject, EObjectType.Zombie);
+            StartCoroutine(Die());
         }
     }
+
+    private IEnumerator Die()
+    {
+        isDead = true;
+        int sel = Random.Range(0, DeathAudioClips.Length);
+        AudioClip audio = DeathAudioClips[sel];
+
+        AudioSource.PlayOneShot(audio);
+        healthBarObj.SetActive(false);
+        spriteRenderer.enabled = false;
+        capsuleCollider.enabled = false;
+        
+
+        int partCount = Random.Range(2, 3);
+        for (int i = 0; i < partCount; i++)
+        {
+            GameObject part = PoolManager.Instance.GetObject(EObjectType.ZombiePart);
+            part.transform.position = transform.position;
+        }
+        GameManager.Instance.LeftMobCount--;
+        UIManager.Instance.ReduceMonsterCount();
+
+        yield return new WaitForSeconds(audio.length);
+
+        PoolManager.Instance.ReturnObject(this.gameObject, EObjectType.Zombie);
+        isDead = false;
+    }
+
 
     public MonsterDataSO GetInfo()
     {
@@ -166,7 +200,6 @@ public class Monster : MonoBehaviour
             collision.gameObject.GetComponent<Player>().TakeDamage(GetInfo().attackPower);
         }
     }
-
 
 
 
