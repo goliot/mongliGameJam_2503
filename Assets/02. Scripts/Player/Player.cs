@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
 
     IEnumerator CoReload()
     {
-        while(_bulletCount == PlayerData.MaxBullet)
+        while(_bulletCount < PlayerData.MaxBullet)
         {
             // cross hair 리로드 전용으로 바꾸기
             _bulletCount += 1;

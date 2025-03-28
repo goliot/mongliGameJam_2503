@@ -42,6 +42,7 @@ public class PlayerFire : MonoBehaviour
         {
             return;
         }
+        _player.BulletCount--;
 
         mainCamera.Shake();
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

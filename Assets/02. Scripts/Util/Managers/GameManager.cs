@@ -3,13 +3,13 @@ using UnityEngine;
 public class GameManager : MonoSingleton<GameManager>
 {
     public int StageLevel;
-    public int SpawnCount;
+    public MobCountDataSO MobCountData;
     public Spawner spawner;
     public Player player;
 
     private void Start()
     {
-        spawner.Spawn(spawner.GetRandomPosition(), SpawnCount);
+        spawner.Spawn(spawner.GetRandomPosition(), MobCountData.MobCountList[StageLevel]);
     }
 
     public void Victory()
