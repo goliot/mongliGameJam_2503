@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using NUnit.Framework.Internal.Commands;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoSingleton<UIManager>
 {
@@ -27,6 +28,16 @@ public class UIManager : MonoSingleton<UIManager>
     private TextMeshProUGUI TfMaxBulletCount;
 
 
+    //결과
+    [SerializeField]
+    private GameObject Obj_end;
+    [SerializeField]
+    private GameObject Obj_Victory;
+    [SerializeField]
+    private GameObject Obj_End;
+
+
+
     private float lastTimeChecked = 0f;  
     private bool isTweening = false;
 
@@ -34,6 +45,7 @@ public class UIManager : MonoSingleton<UIManager>
     {
         base.Awake();
         playerMaskObj.SetActive(false);
+        Obj_end.SetActive(false);
     }
 
     public void SetHealthBar(float health, float maxHealth)
@@ -109,5 +121,40 @@ public class UIManager : MonoSingleton<UIManager>
         TfEndTime.text = string.Format("{0:N3}", time);  
     }
 
+    public void ShowResult(bool isWin)
+    {
+        Obj_End.SetActive(true);
+
+        if(isWin)
+        {
+            Obj_Victory.SetActive(true);
+            Obj_End.SetActive(false);
+        }
+        else
+        {
+            Obj_End.SetActive(true);
+            Obj_Victory.SetActive(false);
+        }
+
+
+    }
+
+    public void RestartScene()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
+    }
+
+    // 게임 종료 메서드
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        // Unity 에디터에서 실행 중일 때는 플레이 모드를 종료합니다.
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        // 게임 빌드 실행 시 게임을 종료합니다.
+        Application.Quit();
+#endif
+    }
 }
 
