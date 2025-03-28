@@ -67,7 +67,7 @@ public class PlayerFire : MonoBehaviour
     {
         gunSpin.TriggerRecoil();
 
-        if (_player.BulletCount <= 0)
+        if (_player.BulletCount <= 0 || _player.IsReloading)
         {
             if (!_player.IsReloading)
             {
