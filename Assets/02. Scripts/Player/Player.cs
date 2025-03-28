@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
         get => _bulletCount;
         set
         {
-            _bulletCount = Mathf.Min(value, PlayerData.MaxBullet);
+            _bulletCount = Mathf.Clamp(value, 0, PlayerData.MaxBullet);
+          
         }
     }
 
