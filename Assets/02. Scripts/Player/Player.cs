@@ -18,6 +18,22 @@ public class Player : MonoBehaviour
         _sheild = PlayerData.MaxSheild;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Wall"))
+        {
+            Debug.Log(collision.tag);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log(collision.gameObject.tag);
+        }
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))

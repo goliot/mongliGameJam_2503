@@ -6,4 +6,5 @@ public enum EObjectType
     ZombiePart,
     Blood,
     DamageNum,
+    WallFragment,
 }

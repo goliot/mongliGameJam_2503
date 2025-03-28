@@ -87,7 +87,7 @@ public class Fragment : MonoBehaviour
             {
                 isGrounded = true;
                 cartridge.GetComponent<Rigidbody2D>().angularVelocity = 0;
-                cartridge.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 0), 5f).SetEase(Ease.InExpo).OnComplete(() => ReleaseToPool());
+                cartridge.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 0), 30f).SetEase(Ease.InExpo).OnComplete(() => ReleaseToPool());
             }
         }
     }

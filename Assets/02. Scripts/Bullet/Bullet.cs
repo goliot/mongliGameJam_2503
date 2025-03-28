@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.CompareTag("Wall"))
         {
+            FragmentWithWall();
             PoolManager.Instance.ReturnObject(gameObject, EObjectType.Bullet);
         }
 
@@ -17,6 +18,15 @@ public class Bullet : MonoBehaviour
         {
             collision.GetComponent<Monster>().TakeDamage(Damage);
             PoolManager.Instance.ReturnObject(gameObject, EObjectType.Bullet);
+        }
+    }
+
+    private void FragmentWithWall()
+    {
+        for(int i=0; i<3; i++)
+        {
+            GameObject go = PoolManager.Instance.GetObject(EObjectType.WallFragment);
+            go.transform.position = transform.localPosition + Vector3.up;
         }
     }
 
